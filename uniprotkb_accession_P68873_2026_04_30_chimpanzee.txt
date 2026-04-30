@@ -1,0 +1,147 @@
+ID   HBB_PANTR               Reviewed;         147 AA.
+AC   P68873; P02023; Q13852; Q14481; Q14510; Q28799; Q9BX96; Q9UCP8; Q9UCP9;
+DT   21-JUL-1986, integrated into UniProtKB/Swiss-Prot.
+DT   23-JAN-2007, sequence version 2.
+DT   28-JAN-2026, entry version 141.
+DE   RecName: Full=Hemoglobin subunit beta;
+DE   AltName: Full=Beta-globin;
+DE   AltName: Full=Hemoglobin beta chain;
+GN   Name=HBB;
+OS   Pan troglodytes (Chimpanzee).
+OC   Eukaryota; Metazoa; Chordata; Craniata; Vertebrata; Euteleostomi; Mammalia;
+OC   Eutheria; Euarchontoglires; Primates; Haplorrhini; Catarrhini; Hominidae;
+OC   Pan.
+OX   NCBI_TaxID=9598;
+RN   [1]
+RP   NUCLEOTIDE SEQUENCE [GENOMIC DNA] OF 1-121.
+RX   PubMed=3999143; DOI=10.1016/0022-2836(85)90024-5;
+RA   Savatier P., Trabuchet G., Faure C., Chebloune Y., Gouy M., Verdier G.,
+RA   Nigon V.M.;
+RT   "Evolution of the primate beta-globin gene region. High rate of variation
+RT   in CpG dinucleotides and in short repeated sequences between man and
+RT   chimpanzee.";
+RL   J. Mol. Biol. 182:21-29(1985).
+RN   [2]
+RP   PROTEIN SEQUENCE OF 2-147.
+RX   PubMed=5855051; DOI=10.1016/0304-4165(65)90350-8;
+RA   Rifkin D.B., Konigsberg W.;
+RT   "The characterization of the tryptic peptides from the hemoglobin of the
+RT   chimpanzee (Pan troglodytes).";
+RL   Biochim. Biophys. Acta 104:457-461(1965).
+CC   -!- FUNCTION: Involved in oxygen transport from the lung to the various
+CC       peripheral tissues.
+CC   -!- SUBUNIT: Heterotetramer of two alpha chains and two beta chains in
+CC       adult hemoglobin A (HbA).
+CC   -!- TISSUE SPECIFICITY: Red blood cells.
+CC   -!- SIMILARITY: Belongs to the globin family. {ECO:0000255|PROSITE-
+CC       ProRule:PRU00238}.
+CC   -!- SEQUENCE CAUTION:
+CC       Sequence=CAA26204.1; Type=Erroneous gene model prediction; Evidence={ECO:0000305};
+CC   ---------------------------------------------------------------------------
+CC   Copyrighted by the UniProt Consortium, see https://www.uniprot.org/terms
+CC   Distributed under the Creative Commons Attribution (CC BY 4.0) License
+CC   ---------------------------------------------------------------------------
+DR   EMBL; X02345; CAA26204.1; ALT_SEQ; Genomic_DNA.
+DR   PIR; B93303; HBCZ.
+DR   RefSeq; XP_508242.1; XM_508242.5.
+DR   AlphaFoldDB; P68873; -.
+DR   SMR; P68873; -.
+DR   FunCoup; P68873; 35.
+DR   STRING; 9598.ENSPTRP00000005700; -.
+DR   PaxDb; 9598-ENSPTRP00000005700; -.
+DR   Ensembl; ENSPTRT00000006177.4; ENSPTRP00000005700.3; ENSPTRG00000040047.2.
+DR   GeneID; 450978; -.
+DR   KEGG; ptr:450978; -.
+DR   CTD; 3043; -.
+DR   VGNC; VGNC:3255; HBB.
+DR   eggNOG; KOG3378; Eukaryota.
+DR   GeneTree; ENSGT00940000163476; -.
+DR   HOGENOM; CLU_003827_10_0_1; -.
+DR   InParanoid; P68873; -.
+DR   OMA; HAIVSIW; -.
+DR   OrthoDB; 9886081at2759; -.
+DR   Proteomes; UP000002277; Chromosome 11.
+DR   Bgee; ENSPTRG00000040047; Expressed in bone marrow and 20 other cell types or tissues.
+DR   GO; GO:0005615; C:extracellular space; IEA:Ensembl.
+DR   GO; GO:0031838; C:haptoglobin-hemoglobin complex; IBA:GO_Central.
+DR   GO; GO:0005833; C:hemoglobin complex; IBA:GO_Central.
+DR   GO; GO:0031720; F:haptoglobin binding; IEA:Ensembl.
+DR   GO; GO:0020037; F:heme binding; IBA:GO_Central.
+DR   GO; GO:0031721; F:hemoglobin alpha binding; IBA:GO_Central.
+DR   GO; GO:0046872; F:metal ion binding; IEA:UniProtKB-KW.
+DR   GO; GO:0019825; F:oxygen binding; IEA:Ensembl.
+DR   GO; GO:0005344; F:oxygen carrier activity; IBA:GO_Central.
+DR   GO; GO:0004601; F:peroxidase activity; IEA:Ensembl.
+DR   GO; GO:0048821; P:erythrocyte development; IBA:GO_Central.
+DR   GO; GO:0042744; P:hydrogen peroxide catabolic process; IEA:Ensembl.
+DR   GO; GO:0006954; P:inflammatory response; IEA:Ensembl.
+DR   GO; GO:0030185; P:nitric oxide transport; IEA:Ensembl.
+DR   GO; GO:0015671; P:oxygen transport; IBA:GO_Central.
+DR   GO; GO:0070293; P:renal absorption; IEA:Ensembl.
+DR   GO; GO:0042542; P:response to hydrogen peroxide; IEA:Ensembl.
+DR   CDD; cd08925; Hb-beta-like; 1.
+DR   FunFam; 1.10.490.10:FF:000001; Hemoglobin subunit beta; 1.
+DR   Gene3D; 1.10.490.10; Globins; 1.
+DR   InterPro; IPR000971; Globin.
+DR   InterPro; IPR009050; Globin-like_sf.
+DR   InterPro; IPR012292; Globin/Proto.
+DR   InterPro; IPR002337; Hemoglobin_b.
+DR   InterPro; IPR050056; Hemoglobin_oxygen_transport.
+DR   PANTHER; PTHR11442; HEMOGLOBIN FAMILY MEMBER; 1.
+DR   PANTHER; PTHR11442:SF42; HEMOGLOBIN SUBUNIT BETA; 1.
+DR   Pfam; PF00042; Globin; 1.
+DR   PRINTS; PR00814; BETAHAEM.
+DR   SUPFAM; SSF46458; Globin-like; 1.
+DR   PROSITE; PS01033; GLOBIN; 1.
+PE   1: Evidence at protein level;
+KW   Acetylation; Direct protein sequencing; Heme; Iron; Metal-binding;
+KW   Oxygen transport; Phosphoprotein; Reference proteome; S-nitrosylation;
+KW   Transport.
+FT   INIT_MET        1
+FT                   /note="Removed"
+FT                   /evidence="ECO:0000250|UniProtKB:P02086,
+FT                   ECO:0000269|PubMed:5855051"
+FT   CHAIN           2..147
+FT                   /note="Hemoglobin subunit beta"
+FT                   /id="PRO_0000053060"
+FT   DOMAIN          3..147
+FT                   /note="Globin"
+FT                   /evidence="ECO:0000255|PROSITE-ProRule:PRU00238"
+FT   BINDING         64
+FT                   /ligand="heme b"
+FT                   /ligand_id="ChEBI:CHEBI:60344"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="distal binding residue"
+FT   BINDING         93
+FT                   /ligand="heme b"
+FT                   /ligand_id="ChEBI:CHEBI:60344"
+FT                   /ligand_part="Fe"
+FT                   /ligand_part_id="ChEBI:CHEBI:18248"
+FT                   /note="proximal binding residue"
+FT   MOD_RES         2
+FT                   /note="N-acetylvaline"
+FT                   /evidence="ECO:0000250|UniProtKB:P02086"
+FT   MOD_RES         13
+FT                   /note="Phosphothreonine"
+FT                   /evidence="ECO:0000250|UniProtKB:P68871"
+FT   MOD_RES         45
+FT                   /note="Phosphoserine"
+FT                   /evidence="ECO:0000250|UniProtKB:P68871"
+FT   MOD_RES         60
+FT                   /note="N6-acetyllysine"
+FT                   /evidence="ECO:0000250|UniProtKB:P68871"
+FT   MOD_RES         83
+FT                   /note="N6-acetyllysine"
+FT                   /evidence="ECO:0000250|UniProtKB:P68871"
+FT   MOD_RES         94
+FT                   /note="S-nitrosocysteine"
+FT                   /evidence="ECO:0000250|UniProtKB:P68871"
+FT   MOD_RES         145
+FT                   /note="N6-acetyllysine"
+FT                   /evidence="ECO:0000250|UniProtKB:P68871"
+SQ   SEQUENCE   147 AA;  15998 MW;  A31F6D621C6556A1 CRC64;
+     MVHLTPEEKS AVTALWGKVN VDEVGGEALG RLLVVYPWTQ RFFESFGDLS TPDAVMGNPK
+     VKAHGKKVLG AFSDGLAHLD NLKGTFATLS ELHCDKLHVD PENFRLLGNV LVCVLAHHFG
+     KEFTPPVQAA YQKVVAGVAN ALAHKYH
+//
