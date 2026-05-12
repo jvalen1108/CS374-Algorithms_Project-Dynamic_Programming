@@ -107,9 +107,46 @@ def needleman_wunsch_basic(seq1, seq2):
 
 
 human_sequence = read_fasta("DNA Sequences/human_hba.fasta")
-chimp_sequence = read_fasta("DNA Sequences/chimp_hba.fasta")
+import time
 
-aligned_human, aligned_chimp = hirschberg(human_sequence, chimp_sequence)
+def score_from_alignment(a1, a2):
+    """Compute alignment score from the aligned strings."""
+    match_score, mismatch_penalty, gap_penalty = 2, -1, -2
+    score = 0
+    for c1, c2 in zip(a1, a2):
+        if c1 == '-' or c2 == '-':
+            score += gap_penalty
+        elif c1 == c2:
+            score += match_score
+        else:
+            score += mismatch_penalty
+    return score
 
-print(f"Aligned Human:\n{aligned_human}")
-print(f"\nAligned Chimp:\n{aligned_chimp}")
+def identity(a1, a2):
+    if len(a1) == 0: return 0.0
+    matches = sum(1 for c1, c2 in zip(a1, a2) if c1 == c2 and c1 != '-')
+    return 100.0 * matches / len(a1)
+
+def run(label, seq1, seq2):
+    print(f"\n=== Hirschberg: {label} ===")
+    print(f"Lengths: {len(seq1)} aa vs {len(seq2)} aa")
+    start = time.perf_counter()
+    a1, a2 = hirschberg(seq1, seq2)
+    elapsed = time.perf_counter() - start
+    sc = score_from_alignment(a1, a2)
+    ident = identity(a1, a2)
+    # Compare against full NW to verify same score
+    _, _, nw_sc = needleman_wunsch_basic(seq1, seq2)
+    match = "MATCH" if sc == nw_sc else f"MISMATCH (NW={nw_sc})"
+    print(f"Score:           {sc}  (vs NW: {match})")
+    print(f"Identity:        {ident:.2f}%")
+    print(f"Alignment len:   {len(a1)} aa")
+    print(f"Runtime:         {elapsed:.4f} seconds")
+
+# Hemoglobin comparisons (verifies correctness against NW)
+human = read_fasta("DNA Sequences/human_hba.fasta")
+chimp = read_fasta("DNA Sequences/chimp_hba.fasta")
+mouse = read_fasta("DNA Sequences/mouse_hba.fasta")
+
+run("Human vs Chimp HBA",  human, chimp)
+run("Human vs Mouse HBA",  human, mouse)

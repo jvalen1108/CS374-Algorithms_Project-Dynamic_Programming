@@ -39,7 +39,7 @@ def smith_waterman(seq1, seq2):
             up = score[i - 1][j] + gap_penalty
             left = score[i][j - 1] + gap_penalty
 
-            # Key SW difference: floor at 0 instead of allowing negatives
+            # Diffference from Needleman-Wunsch: floor at 0 instead of allowing negatives
             score[i][j] = max(0, diagonal, up, left)
 
             if score[i][j] > max_score:
