@@ -13,9 +13,9 @@ def read_fasta(filename):
     return sequence
 
 def needleman_wunsch(seq1, seq2):
-    match_score = 1
+    match_score = 2
     mismatch_penalty = -1
-    gap_penalty = -1
+    gap_penalty = -2
 
     rows = len(seq1) + 1
     cols = len(seq2) + 1
@@ -50,41 +50,43 @@ def needleman_wunsch(seq1, seq2):
     # Traceback to build the alignment
     aligned_seq1 = ""
     aligned_seq2 = ""
-
+    
     i = len(seq1)
     j = len(seq2)
 
     while i > 0 or j > 0:
-
+        # Decide which cell we came from
         if i > 0 and j > 0:
             if seq1[i - 1] == seq2[j - 1]:
                 diagonal_score = match_score
             else:
                 diagonal_score = mismatch_penalty
+            came_from_diagonal = (score[i][j] == score[i - 1][j - 1] + diagonal_score)
+        else:
+            came_from_diagonal = False
 
-        if score[i][j] == score[i - 1][j - 1] + diagonal_score:
+        came_from_up = (i > 0 and score[i][j] == score[i - 1][j] + gap_penalty)
+
+        if came_from_diagonal:
             aligned_seq1 = seq1[i - 1] + aligned_seq1
             aligned_seq2 = seq2[j - 1] + aligned_seq2
             i -= 1
             j -= 1
-        continue
-
-    if i > 0 and score[i][j] == score[i - 1][j] + gap_penalty:
-        aligned_seq1 = seq1[i - 1] + aligned_seq1
-        aligned_seq2 = "-" + aligned_seq2
-        i -= 1
-
-    else:
-        aligned_seq1 = "-" + aligned_seq1
-        aligned_seq2 = seq2[j - 1] + aligned_seq2
-        j -= 1
+        elif came_from_up:
+            aligned_seq1 = seq1[i - 1] + aligned_seq1
+            aligned_seq2 = "-" + aligned_seq2
+            i -= 1
+        else:
+            aligned_seq1 = "-" + aligned_seq1
+            aligned_seq2 = seq2[j - 1] + aligned_seq2
+            j -= 1
 
     return aligned_seq1, aligned_seq2, score[len(seq1)][len(seq2)]
 
 # Main Program
 start_time = time.time()
-human_sequence = read_fasta("human_hba.fasta")
-mouse_sequence = read_fasta("mouse_hba.fasta")
+human_sequence = read_fasta("DNA Sequences/human_hba.fasta")
+mouse_sequence = read_fasta("DNA Sequences/mouse_hba.fasta")
 print("Human Sequence:", human_sequence)
 print("Mouse Sequence:", mouse_sequence)
 
