@@ -1,3 +1,5 @@
+import time
+
 def read_fasta(filename):
     sequence = ""
     with open(filename, "r") as file:
@@ -107,7 +109,7 @@ def needleman_wunsch_basic(seq1, seq2):
 
 
 human_sequence = read_fasta("DNA Sequences/human_hba.fasta")
-import time
+
 
 def score_from_alignment(a1, a2):
     """Compute alignment score from the aligned strings."""
